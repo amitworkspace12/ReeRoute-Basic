@@ -16,7 +16,6 @@
     box-sizing: border-box;
 }
 
-
 .accordion__button[aria-expanded='true']::before,
 .accordion__button[aria-selected='true']::before {
     transform: rotate(45deg);

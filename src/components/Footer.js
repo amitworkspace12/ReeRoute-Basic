@@ -62,7 +62,7 @@ const Footer = () => {
 
             </div>
             <div className='mt-10 lg:mt-20 flex justify-between '>
-              <ul>
+              <ul className=''>
                 <li className='mt-1'>About US</li>
                 <li className='mt-4'>Our Team</li>
                 <li className='mt-4'>How it Works</li>
