@@ -10,8 +10,8 @@ import Tag from '../images/Feature Tag.png'
 
 const WhyChoose = () => {
   return (
-    <div className='flex flex-col w-full lg:flex-row justify-center items-center lg:justify-start lg:items-start font-Rubik'>
-      <div className='bg-[#2A4F6D] lg:w-1/2 lg:h-[600px] relative w-full p-5'>
+    <div className='flex flex-col w-full md:flex-row justify-center items-center md:justify-start md:items-start font-Rubik'>
+      <div className='bg-[#2A4F6D] lg:w-1/2 lg:h-[600px] relative w-full '>
         <img src={`${Truck}`} className=' left-[20%] top-[7%] w-[700px] lg:absolute'/>
         <img src={Tag} className='lg:absolute w-[300px] bottom-[16.5%] left-[46%]'/>
       </div>
@@ -22,8 +22,8 @@ const WhyChoose = () => {
         <p className='mt-4  text-justify pr-10 font-Kurb'>With Reeroute, experience the perfect blend of reliability and convenience in your transportation needs. Our extensive network, user-friendly platform, and dedicated support ensure a seamless and stress-free booking process. Trust us to connect you with trusted transporters and provide efficient solutions for all your cargo requirements.</p>
 
         <div className='flex flex-col mt-4'>
-            <div className='flex pr-10 '>
-              <div className='flex  items-center w-1/2'>
+            <div className='flex md:pr-10 '>
+              <div className='flex  items-center lg:w-1/2'>
                 <img src={Icon} alt='image' className='w-[50px]'/>
                 <div className='font-medium text-[14px] ml-1'>Extensive <br/> Tranport Network</div>
                 </div>
@@ -34,8 +34,8 @@ const WhyChoose = () => {
                 </div>
             </div>
 
-            <div className='flex  pr-10 mt-3'>
-              <div className='flex  items-center w-1/2'>
+            <div className='flex  lg:pr-10 mt-3'>
+              <div className='flex  items-center lg:w-1/2'>
                 <img src={Icon3} alt='image' className='w-[50px]'/>
                 <div className='font-medium text-[14px] ml-1'>Real-Time Shipment <br/> Tracking</div>
                 </div>
@@ -47,15 +47,15 @@ const WhyChoose = () => {
             </div>
 
 
-            <div className='flex pr-10 mt-3'>
-              <div className='flex  items-center w-1/2'>
+            <div className='flex lg:pr-10 mt-3'>
+              <div className='flex  items-center lg:w-1/2'>
                 <img src={Icon5} alt='image' className='w-[50px]'/>
                 <div className='font-medium text-[14px] ml-1'>Document <br/> Management</div>
                 </div>
 
                 <div className='flex justify-center items-center'>
                 <img src={Icon6} alt='image' className='w-[50px]'/>
-                <div className='font-medium text-[14px] ml-1'>Customizable Truck Selection</div>
+                <div className='font-medium text-[14px] ml-1 break-words'>Customizable Truck Selection</div>
                 </div>
             </div>
 

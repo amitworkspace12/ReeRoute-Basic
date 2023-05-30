@@ -4,11 +4,14 @@ import HeaderBody from './HeaderBody'
 import Photo from '../../images/Photo.png'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import Sidebar from '../MobileSidebar';
 
 const Header = () => {
   return (
     <div className='relative' >
-      <Carousel infiniteLoop={true} showArrows={false} autoPlay={true} showStatus = {false} showThumbs={false} h-full>
+       
+         {/* <Sidebar/> */}
+      <Carousel infiniteLoop={true} showArrows={false} autoPlay={true} showStatus = {false} showThumbs={false} h-full dynamicHeight={false} className='h-[400px]'>
                 <div>
                     <img src={Photo} className='contrast-150 brightness-50 opacity-90 w-full '/>
                 </div>
@@ -21,8 +24,10 @@ const Header = () => {
                 
                 </div>
             </Carousel>
-            <div className='mt-[500px] lg:mt-[0px]'></div>
-      <Navbar/>
+            <Navbar/>
+        
+            <div className='mt-[500px] md:mt-[400px]'></div>
+      
       <HeaderBody/>
     </div>
   )

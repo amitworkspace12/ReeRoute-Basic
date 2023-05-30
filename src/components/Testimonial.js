@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import Profile1 from "../images/profile2.png";
 import Profile2 from "../images/profile1.png";
 import Star from "../images/Star 1.png"
@@ -6,8 +6,20 @@ import Colon from "../images/“.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import left from '../images/left.png'
+import Right from '../images/right.png'
 
 const Testimonial = () => {
+  const sliderRef = useRef()
+
+  const gotoNext = () => {
+    sliderRef.current.slickNext()
+  }
+
+  const gotoPrev = () => {
+    sliderRef.current.slickPrev()
+  }
+
   var settings = {
     infinite: true,
     speed: 500,
@@ -27,10 +39,18 @@ const Testimonial = () => {
   };
   return (
     <>
-    <div className='flex flex-col justify-center text-[#091242] mt-10 p-3 lg:p-18 lg:ml-20 mb-10 font-Rubik'>
+    <div className='flex flex-col justify-center text-[#091242] mt-10 p-3 lg:p-18 lg:ml-20 lg:mr-20 mb-10 font-Rubik'>
     <div className='border-l-4 border-orange-400 bg-slate-200 px-1 w-[90px]'>Testimonial</div>
+      <div className="flex flex-col lg:flex-row justify-between mb-5">
       <h2 className='text-2xl font-bold flex justify-start my-2'>What Our Customer Say</h2>
-    <Slider {...settings}>
+      <div className="flex lg:mr-16 justify-between lg:justify-start ">
+        <button className="lg:mr-4" onClick={()=> gotoNext()}><img src={left} alt="left"/></button>
+        <button className="lg:ml-3" onClick={()=> gotoPrev()}><img src={Right} alt="right"/></button>
+      </div>
+      </div>
+    <Slider {...settings}
+    ref = {sliderRef}
+    >
       <div className="mt-4 lg:mt-0">
        
           <div className="bg-[#F4F4F4] w-full lg:w-[600px] lg:h-[350px] p-5 lg:p-14">

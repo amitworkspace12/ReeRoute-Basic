@@ -1,10 +1,18 @@
 import React from 'react'
+import { useState } from 'react';
+import { GoThreeBars } from 'react-icons/go';
 
-const Navbar = () => {
+const MobileSidebar = () => {
+  const [open, setOpen] = useState(true)
   return (
-    <div className=' text-white p-5 justify-around absolute top-0 left-0 w-full font-Kurb hidden lg:flex'>
-      <div className='-mx-20'>
-      <svg width="60" height="42" viewBox="0 0 60 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <>
+    
+      <div className='w-full h-[30px] bg-gray-400 flex'>
+        <div className='relative'>
+        <GoThreeBars size={35} color='orange' className='pl-2' onClick={() => setOpen(prev => !prev)}/>
+        </div>
+        <div>
+        <svg width="60" height="42" viewBox="0 0 60 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4.35906 33.1702C4.51781 33.1702 4.65441 33.0994 4.76886 32.9579C4.88309 32.8166 4.94028 32.6451 4.94028 32.4436C4.94028 32.2421 4.88309 32.0707 4.76886 31.9292C4.65449 31.7878 4.51789 31.717 4.35906 31.717H1.74365V33.1701H4.35906V33.1702ZM1.74365 33.792V37.5292H0V29.9736H4.35906C5.00221 29.9736 5.5505 30.2148 6.00386 30.6973C6.45721 31.1796 6.68393 31.7618 6.68393 32.4438C6.68393 33.1257 6.45729 33.7069 6.00386 34.1874C5.66284 34.5516 5.26961 34.7783 4.82409 34.8673L6.68393 37.5292H4.35906L1.74365 33.7921V33.792Z" fill="white"/>
 <path d="M8.0318 35.7856H13.8438V37.5292H8.0376L8.0318 35.7856ZM8.0318 32.8796H12.9778V34.6232H8.0318V32.8796ZM13.8438 29.9736L12.972 31.7171H8.0318V29.9736H13.8438Z" fill="white"/>
 <path d="M15.1917 35.7856H21.0037V37.5292H15.1975L15.1917 35.7856ZM15.1917 32.8796H20.1377V34.6232H15.1917V32.8796ZM21.0037 29.9736L20.1319 31.7171H15.1917V29.9736H21.0038H21.0037Z" fill="white"/>
@@ -35,26 +43,144 @@ const Navbar = () => {
 <path d="M36.9892 14.7735C36.8362 14.7763 36.7214 14.7735 36.6531 14.7708H36.9099C36.9373 14.7708 36.9645 14.7708 36.9892 14.7735Z" fill="#F79633"/>
 <path d="M39.7865 9.33198C38.5627 10.045 37.3361 10.7525 36.104 11.4546C35.8417 11.6049 35.6177 11.471 35.6096 11.1678C35.6068 11.0749 35.6068 10.982 35.6041 10.8919V10.7853H31.7249C31.7031 10.7853 31.6812 10.7853 31.6621 10.7825H31.6457C28.8647 10.8645 27.5098 12.214 27.5098 12.214C24.7343 14.5525 25.7914 18.1584 25.7914 18.1584C26.8439 21.957 30.233 22.166 30.233 22.166L37.2815 22.1632C38.213 22.1632 38.967 22.9172 38.967 23.8515V23.8898C38.967 24.8213 38.213 25.5753 37.2815 25.5753H31.6894C27.1334 25.5753 25.4647 24.1317 24.0103 22.6442C22.8429 21.411 22.297 19.4952 22.24 18.5764C22.1146 16.5524 22.1198 12.5883 22.24 10.5093C22.404 7.67919 25.3079 7.36778 25.3079 7.36778H32.05L32.0528 7.3705H35.6068V7.24482C35.6068 7.15749 35.6096 7.07002 35.6122 6.98254C35.6177 6.86786 35.6751 6.71491 35.7598 6.652C35.8362 6.59737 36.0084 6.6028 36.0985 6.652C37.3306 7.34857 38.5571 8.05886 39.7865 8.76922C40.0268 8.90853 40.0268 9.19537 39.7865 9.33198H39.7865Z" fill="#E57E38"/>
 </svg>
-
+        </div>
       </div>
-      <div className='flex'>
-        <ul className='flex'>
-            <li className='mx-10 border-b-4 border-white-500 rounded '>
-                Home
-            </li>
-            <li className='px-10'>
-                About
-            </li>
-            <li className='px-10'>
-                How it Works
-            </li>
-            <li className='px-10'>
-                Contact
-            </li>
-        </ul>
-      </div>
-    </div>
+      {
+      open && (
+      <div className="flex absolute top-0 z-50">
+      
+            <div className="flex flex-col h-screen p-3 bg-slate-500 shadow w-60 ">
+                <div className="space-y-3">
+                    {/* <div className="flex items-center justify-between relative">
+                    
+                        <div className='absolute -right-9 cursor-pointer -top-2' ><GoThreeBars size={35} color='orange' className='pl-2'/></div>
+                    </div> */}
+                    <div className="flex-1">
+                        <ul className="pt-2 pb-4 space-y-1 text-sm">
+                            <li className="rounded-sm">
+                                <a
+                                    href="#"
+                                    className="flex items-center p-2 space-x-3 rounded-md"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        strokeWidth={2}
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                                        />
+                                    </svg>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li className="rounded-sm">
+                                <a
+                                    href="#"
+                                    className="flex items-center p-2 space-x-3 rounded-md"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        strokeWidth={2}
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+                                        />
+                                    </svg>
+                                    <span>About</span>
+                                </a>
+                            </li>
+                            <li className="rounded-sm">
+                                <a
+                                    href="#"
+                                    className="flex items-center p-2 space-x-3 rounded-md"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        strokeWidth={2}
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                                        />
+                                    </svg>
+                                    <span>How it Works</span>
+                                </a>
+                            </li>
+                            <li className="rounded-sm">
+                                <a
+                                    href="#"
+                                    className="flex items-center p-2 space-x-3 rounded-md"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        strokeWidth={2}
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                                        />
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                        />
+                                    </svg>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                            <li className="rounded-sm">
+                                <a
+                                    href="#"
+                                    className="flex items-center p-2 space-x-3 rounded-md"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        strokeWidth={2}
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                                        />
+                                    </svg>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+      )}
+      </>
   )
 }
 
-export default Navbar
+export default MobileSidebar

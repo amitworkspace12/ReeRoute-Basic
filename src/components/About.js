@@ -7,17 +7,17 @@ const About = () => {
     const [flag, setFlag] = useState(true)
   return (
     <div className='mt-20 flex flex-col justify-center items-center  w-full lg:justify-start lg:items-start font-Rubik'>
-      <div className='flex ml-20'>
+      <div className='flex lg:ml-20'>
         <div className={flag ? 'border-b-2 border-[#0AF685] cursor-pointer' : 'cursor-pointer'} onClick={() => setFlag(true)} >Reeroute for Transporter</div>
         <div className={!flag ? 'border-b-2 border-[#0AF685] ml-10 cursor-pointer' : 'ml-10 cursor-pointer'} onClick={() => setFlag(false)}>Reeroute for Owners</div>
       </div>
       <div className='w-5/6 ml-20 lg:w-85 h-[2px] bg-[#F4F4F4] '></div>
       <div className='flex justify-center items-center w-full  bg-[#F4F4F4] my-4 flex-col lg:flex-row '>
-        <div className='w-[50%] p-20'>
+        <div className='w-[50%] lg:p-20'>
             <img src={`${Cover}`} className='w-[400px] p-5 '/>
         </div>
 
-        <div className='w-full pr-20 text-[#2A4F6D] lg:w-[600px] flex flex-col items-center justify-center'>
+        <div className='w-full p-10 lg:pr-20 text-[#2A4F6D] lg:w-[600px] flex flex-col items-center justify-center'>
             { flag ? (
             <div>
             <div className=''>
