@@ -10,6 +10,7 @@ import {
 
 // Demo styles, see 'Styles' section below for some notes on use.
 import 'react-accessible-accordion/dist/fancy-example.css';
+import Email from "../images/email.png"
 
 const FAQ = () => {
   return (
@@ -76,8 +77,8 @@ const FAQ = () => {
         </div>
       </div>
 
-      <div className=" w-full lg:w-[50%] relative">
-        <div className="bg-[#2A4F6D] text-white w-full lg:w-[380px] p-10 absolute lg:-left-[9%] lg:top-[29%]">
+      <div className=" w-full flex flex-col-reverse lg:w-[50%] relative">
+        <div className="bg-[#2A4F6D] text-white w-full lg:w-[380px] p-10 lg:absolute lg:-left-[9%] lg:top-[29%]">
           <div className="border-l-4 border-yellow-400 bg-black text-white px-1 w-[100px]">
             Let's Talk
           </div>
@@ -86,7 +87,7 @@ const FAQ = () => {
 
           <div className="flex items-center mt-5">
             <div className="flex w-[45px] h-[45px] bg-black rounded-[50%] text-center items-center justify-center text-white mr-1">
-              <i class="fa fa-phone"></i>
+            <img src={Email} alt="Email"/>
             </div>
             <div className="font-Kurb">
               <div>Have any Questions</div>

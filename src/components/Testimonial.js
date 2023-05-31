@@ -40,7 +40,7 @@ const Testimonial = () => {
   return (
     <>
     <div className='flex flex-col justify-center text-[#091242] mt-10 p-3 lg:p-18 lg:ml-20 lg:mr-20 mb-10 font-Rubik'>
-    <div className='border-l-4 border-orange-400 bg-slate-200 px-1 w-[90px]'>Testimonial</div>
+    <div className='border-l-4 border-orange-400 bg-slate-200 px-1 w-[95px]'>Testimonial</div>
       <div className="flex flex-col lg:flex-row justify-between mb-5">
       <h2 className='text-2xl font-bold flex justify-start my-2'>What Our Customer Say</h2>
       <div className="flex lg:mr-16 justify-between lg:justify-start ">
@@ -123,7 +123,8 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-      <div>
+
+      <div className="mt-4 lg:mt-0">
    
         <div className='bg-[#F4F4F4] w-full lg:w-[600px] lg:h-[350px] p-5 lg:p-14'>
           <div className='flex justify-between'>
@@ -153,7 +154,7 @@ const Testimonial = () => {
         </div>
         </div>
   
-      <div>
+      <div className="mt-4 lg:mt-0">
       <div className="bg-[#2A4F6D] w-full lg:w-[600px] lg:h-[350px] p-5 lg:p-14 text-white">
           <div className="flex justify-between">
             <div className="flex items-center">

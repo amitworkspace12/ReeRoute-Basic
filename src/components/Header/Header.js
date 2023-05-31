@@ -11,16 +11,16 @@ const Header = () => {
     <div className='relative' >
        
      <div className='mt-[50px] md:mt-0'>
-      <Carousel infiniteLoop={true} showArrows={false} autoPlay={true} showStatus = {false} showThumbs={false} h-full dynamicHeight={true} >
+      <Carousel infiniteLoop={true} showArrows={false} autoPlay={true} showStatus = {false} showThumbs={false} dynamicHeight={true} >
                 <div>
-                    <img src={Photo} className='contrast-150 brightness-50 opacity-90 w-full '/>
+                    <img src={Photo} className='contrast-150 brightness-50 opacity-90 w-full h-[100vh]'/>
                 </div>
                 <div>
-                <img src={Photo} className='contrast-150 brightness-50 opacity-90 w-full'/>
+                <img src={Photo} className='contrast-150 brightness-50 opacity-90 w-full h-[100vh]'/>
                
                 </div>
                 <div>
-                <img src={Photo} className='contrast-150 brightness-50 opacity-90 w-full'/>
+                <img src={Photo} className='contrast-150 brightness-50 opacity-90 h-[100vh] w-full '/>
                 
                 </div>
             </Carousel>

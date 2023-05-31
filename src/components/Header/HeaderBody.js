@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeaderBody = () => {
   return (
-    <div className='flex flex-col lg:text-white md:justify-around md:items-center md:absolute top-[180px] w-full left-2 md:flex-row lg:flex-row md:top-[21%] font-Rubik  md:text-white'>
+    <div className='flex flex-col-reverse md:flex-row lg:text-white justify-around items-center absolute top-[50px] lg:top-[180px] w-full left-2 lg:flex-row  md:top-[28%] font-Rubik text-white'>
       <div className='lg:max-w-[60%] md:p-1 p-10'>
             <p className='border-l-4 border-yellow-400 text-[14px] pl-1'>Streamline Your Logistics with Easy Truck Booking</p> 
             <h3 className='font-bold lg:text-4xl lg:left-0'>ReeRoute: India's <br/> Fastest Truck <br/>  Booking Platform</h3>
@@ -12,7 +12,7 @@ const HeaderBody = () => {
                 <li className='text-[14px]'>Guaranteed Timely Payments</li>
             </ul>
       </div>
-      <div className='w-full md:w-[30%] '>
+      <div className='w-[80%] md:w-[30%] '>
             <div className='bg-white text-black p-6 w-[90%]  rounded-md'>
                 <h1 className='text-center text-lg font-bold'>Book Your Truck</h1>
                 <form>

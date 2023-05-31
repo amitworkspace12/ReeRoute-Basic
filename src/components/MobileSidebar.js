@@ -8,8 +8,8 @@ const MobileSidebar = () => {
     setOpen(prev => !prev)
   };
   return (
-    <div className="absolute font-Kurb   -top-14 w-full md:top-0">
-      <nav className="p-3  shadow md:flex md:items-center md:justify-between md:relative md:px-[10%] bg-[#2A4F6D] md:bg-transparent">
+    <div className="absolute font-Kurb -top-14 w-full md:top-0">
+      <nav className="p-3 shadow md:flex md:items-center md:justify-between md:relative md:px-[10%] bg-[#2A4F6D] md:bg-transparent">
         <div className="flex justify-between items-center ">
           <span className="text-2xl cursor-pointer">
             <svg
@@ -143,7 +143,7 @@ const MobileSidebar = () => {
           </span>
         </div>
 
-        <ul className={`md:flex md:items-center z-[50] md:z-auto md:static absolute  w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 text-white bg-[#2A4F6D] md:bg-transparent ${open === true ? 'opacity-100 top-[40px]' : 'opactiy-0'}`}>
+        <ul className={`md:flex md:items-center z-[50] md:z-auto md:static absolute  w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 text-white bg-[#2A4F6D] md:bg-transparent ${open === true ? 'opacity-100 top-[60px]' : 'opactiy-0'}`}>
           <li className="mx-4 my-6 md:my-0">
             <a href="#" className="text-xl hover:text-orange-500 duration-500">
               Home
