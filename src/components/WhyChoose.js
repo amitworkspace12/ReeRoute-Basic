@@ -31,7 +31,7 @@ const WhyChoose = () => {
                 <div className='font-medium text-[14px] ml-1 break-words'>Extensive <br/> Tranport Network</div>
                 </div>
 
-                <div className='flex justify-center items-center'>
+                <div className='flex justify-center items-center md:ml-0'>
                 <img src={Icon1} alt='image' className='w-[50px]'/>
                 <div className='font-medium text-[14px] ml-1 break-words'>User-Friendly Interface</div>
                 </div>
@@ -45,7 +45,7 @@ const WhyChoose = () => {
 
                 <div className='flex justify-center items-center'>
                 <img src={Icon4} alt='image' className='w-[50px]'/>
-                <div className='font-medium text-[14px] ml-1'>Tranparent Pricing</div>
+                <div className='font-medium text-[14px] ml-1 break-words'>Tranparent Pricing</div>
                 </div>
             </div>
 
@@ -53,10 +53,10 @@ const WhyChoose = () => {
             <div className='flex mt-3 w-full'>
               <div className='flex  items-center w-1/2'>
                 <img src={Icon5} alt='image' className='w-[50px]'/>
-                <div className='font-medium text-[14px] ml-1'>Document <br/> Management</div>
+                <div className='font-medium text-[14px] ml-1 break-words'>Document <br/> Management</div>
                 </div>
 
-                <div className='flex justify-center items-center '>
+                <div className='flex justify-center items-center ml-12 md:ml-0'>
                 <img src={Icon6} alt='image' className='w-[50px]'/>
                 <div className='font-medium text-[14px] ml-1 break-words'>Customizable Truck Selection</div>
                 </div>
